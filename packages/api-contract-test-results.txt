@@ -1,0 +1,32 @@
+
+> @tmo/core@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/core@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/core@1.0.0 test
+> npm run build && node --test tests/*.test.mjs
+
+
+> @tmo/core@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ Core and schema versions are frozen at 1.0.0 (2.102138ms)
+✔ all contracted runtime exports remain present (0.42368ms)
+✔ origin counting is provenance based, not record-count based (0.228116ms)
+✔ unknown bound remains INDETERMINATE (0.174625ms)
+✔ provenance bound rejects strength above maximum (0.260065ms)
+✔ temporal precision cannot be manufactured (0.231632ms)
+✔ semantic relations do not self-promote without evidence (0.269092ms)
+✔ evaluation envelope always identifies Core/schema versions (0.182059ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 341.77192
