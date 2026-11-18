@@ -1,0 +1,33 @@
+{
+  "name": "@tmo/le-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Versioned TMO application profile for provenance-preserving law-enforcement-domain record representation and evaluation.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs mutation/*.test.mjs && npm run coverage && npm run coverage:html && npm run coverage:cobertura",
+    "quality": "npm run typecheck && npm test",
+    "test:property": "npm run build && node --test tests/property.test.mjs",
+    "test:mutation": "npm run build && node --test mutation/*.test.mjs",
+    "coverage": "npm run build && node --test --experimental-test-coverage --test-coverage-include='dist/*.js' --test-coverage-lines=95 --test-coverage-branches=85 --test-coverage-functions=85 tests/*.test.mjs mutation/*.test.mjs",
+    "coverage:html": "node scripts-generate-html.mjs",
+    "coverage:cobertura": "node scripts-generate-cobertura.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "fixtures"
+  ],
+  "dependencies": {
+    "@tmo/core": "^1.0.0"
+  }
+}

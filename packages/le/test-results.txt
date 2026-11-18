@@ -1,0 +1,29 @@
+
+> @tmo/le-profile@1.0.0 test
+> npm run build && node --test tests/*.test.mjs mutation/*.test.mjs
+
+
+> @tmo/le-profile@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ domain mutation set is killed (3.011478ms)
+✔ canonical record set is VALID (2.759127ms)
+✔ assertion cannot be promoted to observed fact while unverified (0.346126ms)
+✔ unresolved evidence remains INDETERMINATE (0.203109ms)
+✔ manufactured temporal precision is INVALID (0.54132ms)
+✔ unknown dimensions cannot be encoded as zero (0.286975ms)
+✔ elevated relationship requires source support (0.256899ms)
+✔ independence cannot exceed provenance-origin bound (0.340485ms)
+✔ property LE-101 synthetic events without sources are always INVALID (10.40398ms)
+✔ property LE-103 unknown evidence remains INDETERMINATE (7.268982ms)
+✔ property LE-105 common-origin multiplicity cannot create full independence (9.681933ms)
+✔ property LE-106 derived temporal precision cannot exceed its source (52.247449ms)
+✔ property LE-107 elevated relations without sources are always INVALID (17.917538ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1369.061151
