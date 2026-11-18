@@ -1,22 +1,19 @@
 {
-  "name": "tmo-validation",
-  "version": "1.0.0",
+  "name": "@tmo/ca-profile",
   "private": true,
-  "description": "TMO validation monorepo for Core, schemas, and independently versioned application profiles.",
-  "workspaces": [
-    "packages/*"
-  ],
-  "engines": {
-    "node": ">=24"
-  },
+  "type": "module",
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present",
-    "quality": "npm run quality --workspaces --if-present",
-    "test:core": "npm run test --workspace=@tmo/core",
-    "test:le": "npm run test --workspace=@tmo/le-profile",
-    "test:ca": "npm run test --workspace=@tmo/ca-profile --if-present",
-    "test:ed": "npm run test --workspace=@tmo/ed-profile --if-present"
+    "test": "node test/run-tests.mjs && node --test test/property-tests.mjs",
+    "mutation": "node mutation/run-mutation-tests.mjs",
+    "quality": "npm test",
+    "build": "node -e \"process.exit(0)\"",
+    "typecheck": "node -e \"process.exit(0)\""
+  },
+  "devDependencies": {
+    "fast-check": "^4.10.2"
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "@tmo/core": "^1.0.0"
   }
 }

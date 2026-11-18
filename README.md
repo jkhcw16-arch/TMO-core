@@ -1,14 +1,9 @@
-# TMO Validation
+# TMO-CA deterministic exigent-circumstances validator
 
-Root workspace for the TMO Core, schema contracts, and independently versioned application profiles.
+Validates the synthetic TMO-CA exigent fixture without producing a judicial conclusion.
 
-## Workspace layout
+- INVALID: schema or invariant violation.
+- INDETERMINATE: representation is conformant but required legal/factual predicates remain unresolved.
+- VALID: reserved for inputs whose required predicates are established; the supplied synthetic fixture is intentionally not such an input.
 
-- `packages/core` - `@tmo/core`
-- `packages/le` - `@tmo/le-profile`
-- `packages/ca` - `@tmo/ca-profile`
-- `packages/ed` - `@tmo/ed-profile`
-
-## Quality
-
-`npm run quality` dispatches each workspace's own quality gate when present.
+Run: `npm test`

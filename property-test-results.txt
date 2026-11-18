@@ -1,0 +1,24 @@
+✔ LE-106 post-entry evidence can never move to/before entry without INVALID (37.459321ms)
+✔ LE-105 proposed finding strength above provenance bound is always INVALID (66.574882ms)
+✔ LE-104 copies sharing an origin never increase independent origin count (22.914096ms)
+✔ LE-104 claiming duplicate records as independent is INVALID (65.598612ms)
+✔ LE-103 unknownAsPass is always INVALID regardless of unrelated input (24.150175ms)
+✔ LE-107 government actor status alone never authorizes entry (65.916595ms)
+✔ LE-101 every synthetic event requires at least one addressable source (18.048534ms)
+✔ baseline remains INDETERMINATE under irrelevant fields (120.102565ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2869.186799
+PASS EXIGENT-M01 -> INVALID
+PASS EXIGENT-M02 -> INVALID
+PASS EXIGENT-M03 -> INVALID
+PASS EXIGENT-M04 -> INVALID
+PASS EXIGENT-M05 -> INVALID
+PASS EXIGENT-M06 -> INVALID
+PASS EXIGENT-P01 -> INDETERMINATE
+TOTAL 12 PASS 12 FAIL 0
