@@ -1,0 +1,121 @@
+
+> @tmo/le-profile@1.0.0 test
+> npm run build && node --test tests/*.test.mjs mutation/*.test.mjs && npm run coverage:html && npm run coverage:cobertura
+
+
+> @tmo/le-profile@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ domain mutation set is killed (3.547057ms)
+✔ canonical record set is VALID (2.625467ms)
+✔ assertion cannot be promoted to observed fact while unverified (0.375009ms)
+✔ unresolved evidence remains INDETERMINATE (0.292065ms)
+✔ manufactured temporal precision is INVALID (0.57326ms)
+✔ unknown dimensions cannot be encoded as zero (0.272288ms)
+✔ elevated relationship requires source support (0.254905ms)
+✔ independence cannot exceed provenance-origin bound (0.311431ms)
+✔ property LE-101 synthetic events without sources are always INVALID (10.188516ms)
+✔ property LE-103 unknown evidence remains INDETERMINATE (7.618823ms)
+✔ property LE-105 common-origin multiplicity cannot create full independence (10.401783ms)
+✔ property LE-106 derived temporal precision cannot exceed its source (54.124202ms)
+✔ property LE-107 elevated relations without sources are always INVALID (13.723239ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2766.528809
+
+> @tmo/le-profile@1.0.0 coverage:html
+> npm run coverage && node scripts-generate-html.mjs
+
+
+> @tmo/le-profile@1.0.0 coverage
+> npm run build && node --test --experimental-test-coverage --test-coverage-include='dist/*.js' --test-coverage-lines=95 --test-coverage-branches=85 --test-coverage-functions=85 tests/*.test.mjs mutation/*.test.mjs
+
+
+> @tmo/le-profile@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ domain mutation set is killed (3.090398ms)
+✔ canonical record set is VALID (2.031552ms)
+✔ assertion cannot be promoted to observed fact while unverified (0.379308ms)
+✔ unresolved evidence remains INDETERMINATE (0.178243ms)
+✔ manufactured temporal precision is INVALID (0.683345ms)
+✔ unknown dimensions cannot be encoded as zero (0.211114ms)
+✔ elevated relationship requires source support (0.265405ms)
+✔ independence cannot exceed provenance-origin bound (0.472492ms)
+✔ property LE-101 synthetic events without sources are always INVALID (11.359121ms)
+✔ property LE-103 unknown evidence remains INDETERMINATE (6.878288ms)
+✔ property LE-105 common-origin multiplicity cannot create full independence (10.155415ms)
+✔ property LE-106 derived temporal precision cannot exceed its source (64.722752ms)
+✔ property LE-107 elevated relations without sources are always INVALID (14.209231ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2673.430556
+ℹ start of coverage report
+ℹ ---------------------------------------------------------------
+ℹ file           | line % | branch % | funcs % | uncovered lines
+ℹ ---------------------------------------------------------------
+ℹ dist           |        |          |         | 
+ℹ  evaluator.js  | 100.00 |    87.50 |  100.00 | 
+ℹ  index.js      | 100.00 |   100.00 |  100.00 | 
+ℹ  invariants.js |  93.94 |    86.84 |   78.95 | 34-37
+ℹ  model.js      | 100.00 |   100.00 |  100.00 | 
+ℹ ---------------------------------------------------------------
+ℹ all files      |  95.40 |    87.50 |   87.10 | 
+ℹ ---------------------------------------------------------------
+ℹ end of coverage report
+
+> @tmo/le-profile@1.0.0 coverage:cobertura
+> npm run coverage && node scripts-generate-cobertura.mjs
+
+
+> @tmo/le-profile@1.0.0 coverage
+> npm run build && node --test --experimental-test-coverage --test-coverage-include='dist/*.js' --test-coverage-lines=95 --test-coverage-branches=85 --test-coverage-functions=85 tests/*.test.mjs mutation/*.test.mjs
+
+
+> @tmo/le-profile@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ domain mutation set is killed (2.985082ms)
+✔ canonical record set is VALID (2.463858ms)
+✔ assertion cannot be promoted to observed fact while unverified (0.393404ms)
+✔ unresolved evidence remains INDETERMINATE (0.179986ms)
+✔ manufactured temporal precision is INVALID (0.50365ms)
+✔ unknown dimensions cannot be encoded as zero (0.20853ms)
+✔ elevated relationship requires source support (0.22986ms)
+✔ independence cannot exceed provenance-origin bound (0.652077ms)
+✔ property LE-101 synthetic events without sources are always INVALID (11.852102ms)
+✔ property LE-103 unknown evidence remains INDETERMINATE (6.790995ms)
+✔ property LE-105 common-origin multiplicity cannot create full independence (9.244635ms)
+✔ property LE-106 derived temporal precision cannot exceed its source (64.20106ms)
+✔ property LE-107 elevated relations without sources are always INVALID (14.883339ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2773.891986
+ℹ start of coverage report
+ℹ ---------------------------------------------------------------
+ℹ file           | line % | branch % | funcs % | uncovered lines
+ℹ ---------------------------------------------------------------
+ℹ dist           |        |          |         | 
+ℹ  evaluator.js  | 100.00 |    87.50 |  100.00 | 
+ℹ  index.js      | 100.00 |   100.00 |  100.00 | 
+ℹ  invariants.js |  93.94 |    86.84 |   78.95 | 34-37
+ℹ  model.js      | 100.00 |   100.00 |  100.00 | 
+ℹ ---------------------------------------------------------------
+ℹ all files      |  95.40 |    87.50 |   87.10 | 
+ℹ ---------------------------------------------------------------
+ℹ end of coverage report
