@@ -1,0 +1,162 @@
+
+> tmo-validation@1.0.0 quality
+> npm run quality --workspaces --if-present
+
+
+> @tmo/ca-profile@0.1.0 quality
+> npm test
+
+
+> @tmo/ca-profile@0.1.0 test
+> node test/run-tests.mjs && node --test test/property-tests.mjs
+
+PASS EXIGENT-M01 -> INVALID
+PASS EXIGENT-M02 -> INVALID
+PASS EXIGENT-M03 -> INVALID
+PASS EXIGENT-M04 -> INVALID
+PASS EXIGENT-M05 -> INVALID
+PASS EXIGENT-M06 -> INVALID
+PASS EXIGENT-P01 -> INDETERMINATE
+TOTAL 12 PASS 12 FAIL 0
+✔ LE-106 post-entry evidence can never move to/before entry without INVALID (37.605692ms)
+✔ LE-105 proposed finding strength above provenance bound is always INVALID (69.057604ms)
+✔ LE-104 copies sharing an origin never increase independent origin count (22.124395ms)
+✔ LE-104 claiming duplicate records as independent is INVALID (71.172466ms)
+✔ LE-103 unknownAsPass is always INVALID regardless of unrelated input (27.286905ms)
+✔ LE-107 government actor status alone never authorizes entry (70.231197ms)
+✔ LE-101 every synthetic event requires at least one addressable source (17.218445ms)
+✔ baseline remains INDETERMINATE under irrelevant fields (166.18274ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2491.741984
+
+> @tmo/core@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/core@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/core@1.0.0 test
+> npm run build && npm run test:types && node --test tests/*.test.mjs
+
+
+> @tmo/core@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @tmo/core@1.0.0 test:types
+> tsc -p tsconfig.contract.json
+
+✔ Core and schema versions are frozen at 1.0.0 (2.082783ms)
+✔ all contracted runtime exports remain present (0.314317ms)
+✔ origin counting is provenance based, not record-count based (0.252722ms)
+✔ unknown bound remains INDETERMINATE (0.185587ms)
+✔ provenance bound rejects strength above maximum (0.229508ms)
+✔ temporal precision cannot be manufactured (0.228287ms)
+✔ semantic relations do not self-promote without evidence (0.35324ms)
+✔ evaluation envelope always identifies Core/schema versions (0.184615ms)
+✔ missing provenance ids do not manufacture origins (2.353379ms)
+✔ empty provenance produces a null bound (0.23013ms)
+✔ a proposed value exactly on its bound remains VALID (0.371524ms)
+✔ a proposed value above its bound is INVALID even by a small amount (0.166852ms)
+✔ temporal validation with no source temporal state is INDETERMINATE (0.341769ms)
+✔ equal temporal precision is VALID (0.168966ms)
+✔ coarser temporal output remains VALID (0.224359ms)
+✔ unsupported authorization is INVALID (0.177612ms)
+✔ unsupported causation is INVALID (0.483153ms)
+✔ association does not require elevation evidence (0.439592ms)
+✔ elevated relation with a source can validate without promoting another kind (0.242794ms)
+✔ evaluation envelope overwrites caller attempts to supply version through spread shape (0.222265ms)
+✔ mixed SECOND + DAY rejects SECOND output under least-precise required-source rule (1.088345ms)
+✔ mixed SECOND + DAY permits DAY output (0.169627ms)
+✔ SECOND + YEAR rejects SECOND output (1.378116ms)
+✔ all DAY inputs reject SECOND output (0.169326ms)
+✔ input order does not change strict aggregation result (0.312735ms)
+✔ INTERVAL form is independent from endpoint precision (0.233236ms)
+✔ second-precise interval may preserve second precision (0.211154ms)
+✔ REG-TMO106-001 coarse required source prevents precision borrowing (1.142316ms)
+✔ REG-TMO106-002 adding a coarser required source never increases permissible precision (0.18194ms)
+✔ REG-TMO106-003 least-precise ceiling is permutation invariant (0.304659ms)
+✔ REG-TMO106-004 output at least-precise required source remains valid (0.186268ms)
+✔ REG-TMO106-005 INTERVAL is form, not precision (0.437699ms)
+✔ REG-TMO106-006 changing form alone does not alter precision ceiling (0.189564ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1606.177908
+
+> @tmo/ed-profile@0.1.0 quality
+> npm test
+
+
+> @tmo/ed-profile@0.1.0 test
+> node --test
+
+ℹ tests 0
+ℹ suites 0
+ℹ pass 0
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18.411957
+
+> @tmo/le-profile@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/le-profile@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/le-profile@1.0.0 test
+> npm run build && node --test tests/*.test.mjs mutation/*.test.mjs && npm run coverage:html && npm run coverage:cobertura
+
+
+> @tmo/le-profile@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ domain mutation set is killed (3.00701ms)
+✔ canonical record set is VALID (2.562269ms)
+✔ assertion cannot be promoted to observed fact while unverified (0.337992ms)
+✔ unresolved evidence remains INDETERMINATE (0.236973ms)
+✔ manufactured temporal precision is INVALID (0.567351ms)
+✔ unknown dimensions cannot be encoded as zero (0.318315ms)
+✔ elevated relationship requires source support (0.360404ms)
+✔ independence cannot exceed provenance-origin bound (0.317143ms)
+✔ property LE-101 synthetic events without sources are always INVALID (10.637794ms)
+✔ property LE-103 unknown evidence remains INDETERMINATE (7.481455ms)
+✔ property LE-105 common-origin multiplicity cannot create full independence (9.508403ms)
+✔ property LE-106 derived temporal precision cannot exceed its source (18.128827ms)
+✔ property LE-107 elevated relations without sources are always INVALID (58.907533ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2042.14745
+
+> @tmo/le-profile@1.0.0 coverage:html
+> npm run coverage && node scripts-generate-html.mjs
+
+
+> @tmo/le-profile@1.0.0 coverage
+> npm run build && node --test --experimental-test-coverage --test-coverage-include='dist/*.js' --test-coverage-lines=95 --test-coverage-branches=85 --test-coverage-functions=85 tests/*.test.mjs mutation/*.test.mjs
+
+
+> @tmo/le-profile@1.0.0 build
+> tsc -p tsconfig.json
+

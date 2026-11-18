@@ -1,0 +1,9 @@
+{
+  "core": { "version": "1.0.0", "status": "stable" },
+  "schema": { "version": "1.0.0", "status": "stable" },
+  "profiles": {
+    "LE": { "version": "1.0.0", "status": "stable", "core": ">=1.0.0 <2.0.0", "schema": ">=1.0.0 <2.0.0" },
+    "CA": { "version": "0.1.0", "status": "development", "core": ">=1.0.0 <2.0.0", "schema": ">=1.0.0 <2.0.0" },
+    "ED": { "version": "0.1.0", "status": "development", "core": ">=1.0.0 <2.0.0", "schema": ">=1.0.0 <2.0.0" }
+  }
+}
