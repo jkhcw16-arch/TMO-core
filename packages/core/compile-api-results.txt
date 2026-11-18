@@ -1,0 +1,61 @@
+
+> @tmo/core@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/core@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/core@1.0.0 test
+> npm run build && npm run test:types && node --test tests/*.test.mjs
+
+
+> @tmo/core@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @tmo/core@1.0.0 test:types
+> tsc -p tsconfig.contract.json
+
+✔ Core and schema versions are frozen at 1.0.0 (2.167884ms)
+✔ all contracted runtime exports remain present (0.382363ms)
+✔ origin counting is provenance based, not record-count based (0.231922ms)
+✔ unknown bound remains INDETERMINATE (0.200945ms)
+✔ provenance bound rejects strength above maximum (0.263521ms)
+✔ temporal precision cannot be manufactured (0.222715ms)
+✔ semantic relations do not self-promote without evidence (0.258682ms)
+✔ evaluation envelope always identifies Core/schema versions (0.216454ms)
+✔ missing provenance ids do not manufacture origins (2.978036ms)
+✔ empty provenance produces a null bound (0.249145ms)
+✔ a proposed value exactly on its bound remains VALID (0.150892ms)
+✔ a proposed value above its bound is INVALID even by a small amount (0.154168ms)
+✔ temporal validation with no source temporal state is INDETERMINATE (0.212987ms)
+✔ equal temporal precision is VALID (0.173263ms)
+✔ coarser temporal output remains VALID (0.152254ms)
+✔ unsupported authorization is INVALID (0.211655ms)
+✔ unsupported causation is INVALID (0.615168ms)
+✔ association does not require elevation evidence (0.430964ms)
+✔ elevated relation with a source can validate without promoting another kind (0.279771ms)
+✔ evaluation envelope overwrites caller attempts to supply version through spread shape (0.270084ms)
+✔ mixed SECOND + DAY rejects SECOND output under least-precise required-source rule (1.085796ms)
+✔ mixed SECOND + DAY permits DAY output (0.181408ms)
+✔ SECOND + YEAR rejects SECOND output (1.293133ms)
+✔ all DAY inputs reject SECOND output (0.266036ms)
+✔ input order does not change strict aggregation result (0.271266ms)
+✔ INTERVAL form is independent from endpoint precision (0.308375ms)
+✔ second-precise interval may preserve second precision (0.216224ms)
+✔ REG-TMO106-001 coarse required source prevents precision borrowing (1.053466ms)
+✔ REG-TMO106-002 adding a coarser required source never increases permissible precision (0.349332ms)
+✔ REG-TMO106-003 least-precise ceiling is permutation invariant (1.510618ms)
+✔ REG-TMO106-004 output at least-precise required source remains valid (0.164978ms)
+✔ REG-TMO106-005 INTERVAL is form, not precision (0.28408ms)
+✔ REG-TMO106-006 changing form alone does not alter precision ceiling (0.215572ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3295.0256

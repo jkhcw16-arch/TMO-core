@@ -1,0 +1,51 @@
+
+> @tmo/core@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/core@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/core@1.0.0 test
+> npm run build && node --test tests/*.test.mjs
+
+
+> @tmo/core@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ Core and schema versions are frozen at 1.0.0 (7.024704ms)
+✔ all contracted runtime exports remain present (0.529368ms)
+✔ origin counting is provenance based, not record-count based (0.378697ms)
+✔ unknown bound remains INDETERMINATE (0.592756ms)
+✔ provenance bound rejects strength above maximum (0.272548ms)
+✔ temporal precision cannot be manufactured (0.373737ms)
+✔ semantic relations do not self-promote without evidence (0.426035ms)
+✔ evaluation envelope always identifies Core/schema versions (0.339143ms)
+✔ missing provenance ids do not manufacture origins (2.281956ms)
+✔ empty provenance produces a null bound (0.227895ms)
+✔ a proposed value exactly on its bound remains VALID (0.233646ms)
+✔ a proposed value above its bound is INVALID even by a small amount (0.151032ms)
+✔ temporal validation with no source temporal state is INDETERMINATE (0.335987ms)
+✔ equal temporal precision is VALID (0.164416ms)
+✔ coarser temporal output remains VALID (0.224339ms)
+✔ unsupported authorization is INVALID (0.176229ms)
+✔ unsupported causation is INVALID (0.496035ms)
+✔ association does not require elevation evidence (0.515341ms)
+✔ elevated relation with a source can validate without promoting another kind (0.255407ms)
+✔ evaluation envelope overwrites caller attempts to supply version through spread shape (0.217406ms)
+✔ mixed SECOND + DAY rejects SECOND output under least-precise required-source rule (1.179129ms)
+✔ mixed SECOND + DAY permits DAY output (0.164236ms)
+✔ SECOND + YEAR rejects SECOND output (1.196522ms)
+✔ all DAY inputs reject SECOND output (0.162112ms)
+✔ input order does not change strict aggregation result (2.191698ms)
+✔ INTERVAL form is independent from endpoint precision (0.162403ms)
+✔ second-precise interval may preserve second precision (0.210673ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1818.768274

@@ -1,0 +1,50 @@
+
+> @tmo/core@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/core@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/core@1.0.0 test
+> npm run build && node --test tests/*.test.mjs
+
+
+> @tmo/core@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ Core and schema versions are frozen at 1.0.0 (2.132579ms)
+✔ all contracted runtime exports remain present (0.317753ms)
+✔ origin counting is provenance based, not record-count based (0.301783ms)
+✔ unknown bound remains INDETERMINATE (0.381592ms)
+✔ provenance bound rejects strength above maximum (0.275124ms)
+✔ temporal precision cannot be manufactured (1.665668ms)
+✔ semantic relations do not self-promote without evidence (1.178839ms)
+✔ evaluation envelope always identifies Core/schema versions (0.223087ms)
+✔ missing provenance ids do not manufacture origins (2.377095ms)
+✔ empty provenance produces a null bound (0.291344ms)
+✔ a proposed value exactly on its bound remains VALID (0.145261ms)
+✔ a proposed value above its bound is INVALID even by a small amount (0.148578ms)
+✔ temporal validation with no source temporal state is INDETERMINATE (0.447825ms)
+✔ equal temporal precision is VALID (0.166861ms)
+✔ coarser temporal output remains VALID (0.223487ms)
+✔ unsupported authorization is INVALID (0.318354ms)
+✔ unsupported causation is INVALID (0.463375ms)
+✔ association does not require elevation evidence (0.50908ms)
+✔ elevated relation with a source can validate without promoting another kind (0.241841ms)
+✔ evaluation envelope overwrites caller attempts to supply version through spread shape (0.221534ms)
+✔ mixed SECOND + DAY currently permits SECOND output (1.084333ms)
+✔ mixed SECOND + DAY permits DAY output (0.28394ms)
+✔ all DAY inputs reject SECOND output (0.233515ms)
+✔ adding a coarse required input can expose aggregation behavior (0.197438ms)
+✔ input order does not change aggregation result (0.213289ms)
+✔ INTERVAL ranks below DAY in current model and therefore can reject DAY output when alone (0.154107ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1414.444049

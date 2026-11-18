@@ -1,0 +1,44 @@
+
+> @tmo/core@1.0.0 quality
+> npm run typecheck && npm test
+
+
+> @tmo/core@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @tmo/core@1.0.0 test
+> npm run build && node --test tests/*.test.mjs
+
+
+> @tmo/core@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ Core and schema versions are frozen at 1.0.0 (2.050134ms)
+✔ all contracted runtime exports remain present (0.288818ms)
+✔ origin counting is provenance based, not record-count based (0.348961ms)
+✔ unknown bound remains INDETERMINATE (0.175297ms)
+✔ provenance bound rejects strength above maximum (0.25195ms)
+✔ temporal precision cannot be manufactured (0.269373ms)
+✔ semantic relations do not self-promote without evidence (0.27889ms)
+✔ evaluation envelope always identifies Core/schema versions (0.179475ms)
+✔ missing provenance ids do not manufacture origins (2.324256ms)
+✔ empty provenance produces a null bound (0.244266ms)
+✔ a proposed value exactly on its bound remains VALID (0.161612ms)
+✔ a proposed value above its bound is INVALID even by a small amount (0.189393ms)
+✔ temporal validation with no source temporal state is INDETERMINATE (0.304668ms)
+✔ equal temporal precision is VALID (0.215973ms)
+✔ coarser temporal output remains VALID (0.279021ms)
+✔ unsupported authorization is INVALID (0.184254ms)
+✔ unsupported causation is INVALID (0.521463ms)
+✔ association does not require elevation evidence (0.48238ms)
+✔ elevated relation with a source can validate without promoting another kind (0.271416ms)
+✔ evaluation envelope overwrites caller attempts to supply version through spread shape (0.219209ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 822.61578
